@@ -149,8 +149,8 @@ static UIImage *discRadarImage;
 		if (d.type == LJDISCTYPE_SPLIT) continue; /* Can't move splitters */
 		
 		CGPoint vcen = d.position;
-		int dx = abs(vcen.x - p.x);
-		int dy = abs(vcen.y - p.y);
+		int dx = fabs(vcen.x - p.x);
+		int dy = fabs(vcen.y - p.y);
 		float distance = sqrt( dx*dx + dy*dy );
 		
 		if ( distance <= 20 ) {
@@ -159,7 +159,7 @@ static UIImage *discRadarImage;
 			return;
 		}
 
-		if ( abs(distance - d.radius) < DISC_DRAG_RADIUS_BAND && d.type != LJDISCTYPE_SPLIT ) {
+		if ( fabsf(distance - d.radius) < DISC_DRAG_RADIUS_BAND && d.type != LJDISCTYPE_SPLIT ) {
 			activeDisc = i;
 			movingCenter = NO;
 		}
@@ -206,8 +206,8 @@ static UIImage *discRadarImage;
 	} else {
 		/* Changing radius */
 		CGPoint c = d.position;
-		int dx = abs(c.x - p.x);
-		int dy = abs(c.y - p.y);
+		int dx = fabs(c.x - p.x);
+		int dy = fabs(c.y - p.y);
 		
 		if (dx > LJDISC_MAX_RADIUS || dy > LJDISC_MAX_RADIUS) {
 			d.radius = LJDISC_MAX_RADIUS;
