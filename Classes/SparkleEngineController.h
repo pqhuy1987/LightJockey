@@ -22,6 +22,7 @@
 
 @interface SparkleEngineController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
 	UIView *contentView;
+    UIView *rootView;
 	
 	/* Views */
 	SparkleEngineView     *sparkleView;

@@ -42,12 +42,19 @@
 		
 		/* Models */
 		levelModel = [[LJLevel alloc] initWithLevel:0 fromGroup:0];
+        
+        /* Views */
+        rootView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
+        rootView.backgroundColor = [UIColor blackColor];
+        rootView.opaque = YES;
+        self.view = rootView;
 				
 		/* Views */
-		contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
+		contentView = [[UIView alloc] initWithFrame:CGRectMake(0, (568-480)/2, 320, 480)];
 		contentView.backgroundColor = [UIColor blackColor];
-		contentView.opaque = YES;
-		self.view = contentView;
+		//contentView.opaque = YES;
+        [rootView addSubview:contentView];
+        [contentView release];
 		
 		sparkleView = [[SparkleEngineView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
 		//sparkleView.levelModel = levelModel;
