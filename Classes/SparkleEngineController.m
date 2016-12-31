@@ -81,8 +81,8 @@
 		/* Menu button */
 		menuButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
 		[menuButton addTarget:self action:@selector(_clickedOnMenuButton:) forControlEvents:UIControlEventTouchUpInside];
-		menuButton.frame = CGRectMake(287, 447, 40, 40);
-		[sparkleView addSubview:menuButton];
+		menuButton.frame = CGRectMake(287, 490, 40, 40);
+		[rootView addSubview:menuButton];
 		
 		/* Table initialization */
 		levelTableBackground = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
@@ -165,11 +165,11 @@
 			
 		menuExitButton = [UIButton buttonWithType:UIButtonTypeInfoLight];		
 		[menuExitButton addTarget:self action:@selector(_clickedOnMenuExitButton:) forControlEvents:UIControlEventTouchUpInside];
-		menuExitButton.frame = CGRectMake(287, 447, 40, 40);
+		menuExitButton.frame = CGRectMake(287, 490, 40, 40);
 		menuExitButton.alpha = 1;
 		menuExitButton.hidden = YES;
 		menuExitButton.backgroundColor = [UIColor clearColor];
-		[contentView addSubview:menuExitButton];
+		[rootView addSubview:menuExitButton];
 		 
 		/* This is the "level complete" message system */
 		levelCompleteView = [[UIView alloc] initWithFrame:CGRectZero];
