@@ -532,11 +532,11 @@
 
 /* -------------------------- TABLE DELEGATE METHODS ----------------------- */
 
-// decide what kind of accesory view (to the far right) we will use
-- (UITableViewCellAccessoryType)tableView:(UITableView *)tableView accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath
-{
-	return UITableViewCellAccessoryNone;
-}
+//// decide what kind of accesory view (to the far right) we will use
+//- (UITableViewCellAccessoryType)tableView:(UITableView *)tableView accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath
+//{
+//	return UITableViewCellAccessoryNone;
+//}
 
 - (void) _cellSelectedTimer:(NSTimer*)t {
 	UILJLevelCell *cell = t.userInfo;
