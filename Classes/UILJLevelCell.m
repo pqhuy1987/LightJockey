@@ -86,7 +86,7 @@ static UIImage *background_unbeaten = nil;
 		starImage.frame = CGRectMake(12, 5, 60, 90);
 		starImage.alpha = 1;
 		
-		backgroundImage.image = background_beaten;
+		//backgroundImage.image = background_beaten;
 		
 		//levelNameView.customColor = [UIColor colorWithRed:245/255.0 green:255/255.0 blue:180/255.0 alpha:1];
 		levelNameView.alpha = 1;
